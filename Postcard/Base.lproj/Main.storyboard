@@ -13,6 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="MM4-Ut-rZN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GNL-IQ-F6r">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SagradaFamilia.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="hBs-jT-XDL">
@@ -81,14 +82,6 @@
                                     <rect key="frame" x="16" y="258" width="342" height="30"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Message huh?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Puh-vt-wo4">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="296" width="342" height="30"/>
-                                </variation>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCa-RM-wFN">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.44355527164105157" blue="0.37154180294346173" alpha="1" colorSpace="calibratedRGB"/>
@@ -103,6 +96,23 @@
                                     <action selector="sendMailButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="F1p-1k-6Aa"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDF-9I-F59">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="19" y="130" width="182" height="82"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Message huh?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Puh-vt-wo4">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="296" width="342" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -110,8 +120,9 @@
                                 <exclude reference="Bbg-61-zZy"/>
                                 <exclude reference="pmb-bd-9XN"/>
                                 <exclude reference="afL-EN-Qgj"/>
-                                <exclude reference="Puh-vt-wo4"/>
                                 <exclude reference="YCa-RM-wFN"/>
+                                <exclude reference="iDF-9I-F59"/>
+                                <exclude reference="Puh-vt-wo4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -119,13 +130,15 @@
                                 <include reference="Bbg-61-zZy"/>
                                 <include reference="pmb-bd-9XN"/>
                                 <include reference="afL-EN-Qgj"/>
-                                <include reference="Puh-vt-wo4"/>
                                 <include reference="YCa-RM-wFN"/>
+                                <include reference="iDF-9I-F59"/>
+                                <include reference="Puh-vt-wo4"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="MailButton" destination="YCa-RM-wFN" id="aLR-ie-07G"/>
+                        <outlet property="NameLabel" destination="iDF-9I-F59" id="D1s-0m-9gR"/>
                         <outlet property="enterMessageTextField" destination="Puh-vt-wo4" id="dyv-3c-OYW"/>
                         <outlet property="enternameTextField" destination="afL-EN-Qgj" id="1L1-7Z-9kD"/>
                         <outlet property="messageLabel" destination="Bbg-61-zZy" id="Vuo-Zk-wta"/>
